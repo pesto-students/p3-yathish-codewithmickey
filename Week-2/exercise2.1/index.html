@@ -8,30 +8,46 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <div class="head">
-            <header>
-                <h1>Coffee Bean Store</h1>
-                <h3>This is a good coffee bean store</h3>
-            </header>
-        </div>
-        <div class="articlediv">
-            <div class="articleparent">
-                <div class="articlediv1">
-                    <h3>Title</h3>
-                    <h5>Description of the article</h5>
-                </div>
-                <div class="articlediv2">
-                    <h3>Title</h3>
-                    <h5>Description of the article</h5>
-                </div>
-                <div class="articlediv3">
-                    <h3>Title</h3>
-                    <h5>Description of the article</h5>
-                </div>
+<div class="wrapper">
+    <div class="head">
+        <header>
+            <h1>Coffee Bean Store</h1>
+            <h3>This is a good coffee bean store</h3>
+        </header>
+    </div>
+    <article class="articlediv">
+        <div class="articleparent">
+            <div class="articlediv1">
+                <h3>Title</h3>
+                <h5>Description of the article</h5>
+            </div>
+            <div class="articlediv2">
+                <h3>Title</h3>
+                <h5>Description of the article</h5>
+            </div>
+            <div class="articlediv3">
+                <h3>Title</h3>
+                <h5>Description of the article</h5>
             </div>
         </div>
+    </article>
+    <div class="form">
+        <label for="contacts-name">First name</label>
+        <input type="text" name="name" data-constraints="@Required"><span class="form-validation"></span>
+        <label for="contacts-last-name">Last name</label>
+        <input type="text" name="last-name" data-constraints="@Required"><span class="form-validation"></span>
+        <label  for="contacts-email">E-mail</label>
+        <input type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
+        <label for="contacts-phone">Phone</label>
+        <input type="text" name="phone" data-constraints="@Numeric @Required"><span class="form-validation"></span>
+        <label for="contacts-message">Message</label>
+        <textarea name="message" data-constraints="@Required" style="height:200px;"></textarea><span class="form-validation"></span>
+        <input type="submit" value="Submit"/>
     </div>
+    <footer class="foot">
+        A page footer containing info about you or the site.
+    </footer>
+</div>
    
    
     
