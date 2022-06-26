@@ -31,8 +31,8 @@
 
     .parent:hover :nth-child(4) {
         transform-origin: bottom right;
-        -webkit-animation: spinpos 1.0s forwards; 
-        animation: spinpos 1.0s forwards;
+        -webkit-animation: spinpos 2.0s forwards; 
+        animation: spinpos 2.0s forwards;
 
     }
 
@@ -61,12 +61,12 @@
     background-color: red;
     }
     .div2 { grid-area: 1 / 2 / 2 / 3; 
-        background-color: green;}
+        background-color: yellow;}
 
     .div3 { grid-area: 2 / 1 / 3 / 2; 
         background-color: blue;}
     .div4 { grid-area: 2 / 2 / 3 / 3; 
-        background-color: yellow;
+        background-color: green;
     }
 
 
