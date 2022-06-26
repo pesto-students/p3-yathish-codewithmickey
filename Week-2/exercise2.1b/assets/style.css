@@ -11,30 +11,50 @@
 
     .parent:hover :nth-child(1) {
         transform-origin: top left;
-        transform: rotate(-90deg);
+        -webkit-animation: spinpos 2.0s forwards; 
+        animation: spinpos 2.0s forwards;
     }
 
     .parent:hover :nth-child(2) {
         transform-origin: top right;
-        transform: rotate(90deg);
+        -webkit-animation: spinneg 2.0s forwards; 
+        animation: spinneg 2.0s forwards;
+
     }
 
     .parent:hover :nth-child(3) {
         transform-origin: bottom left;
-        transform: rotate(90deg);
+        -webkit-animation: spinneg 2.0s forwards; 
+        animation: spinneg 2.0s forwards;
+
     }
 
     .parent:hover :nth-child(4) {
         transform-origin: bottom right;
-        transform: rotate(-90deg);
+        -webkit-animation: spinpos 1.0s forwards; 
+        animation: spinpos 1.0s forwards;
+
     }
 
+
+    @keyframes spinneg {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(-90deg);
+        }
+    }
+
+    @keyframes spinpos {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(90deg);}
+        
+    }
 
    
     
 .parent > * {
     width:50px;
     height:50px;
+    
 }
 
     .div1 { grid-area: 1 / 1 / 2 / 2; 
@@ -55,4 +75,6 @@
     position: fixed;
     width: 100px;
     height: 100px;
+    text-align: center;
+    line-height: 100px;
 }
