@@ -1,4 +1,4 @@
-# **Exercise 1.1** {#exercise-1-1}
+# **Exercise 1.1**
 ## Introduction
 ___
 This document answers the questions of exercise 1.1 from Week 1 Assignment. Each question has an individual section for its explaination or answer.
