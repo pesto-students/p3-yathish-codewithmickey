@@ -1,6 +1,4 @@
-
-
-const Exercise_6_1 = {
+const Exercise_6 = {
     
     // Kadane’s algorithm
     // Exercise 6.1
@@ -17,10 +15,36 @@ const Exercise_6_1 = {
                 num = 0 
         }
         return sum
+    },
+    
+    // Exercise 6.2
+    spiralPrint: (arr) =>{
+        let i, rowStart = 0, colStart = 0,output=[],m=arr[0].length, n=arr.length
+        while (rowStart < m && colStart < n) {
+            for (i = colStart; i < n; ++i) {
+                output.push((arr[rowStart][i]));
+            }
+            rowStart++;
+            for (i = rowStart; i < m; ++i) {
+                output.push((arr[i][n - 1]));
+            }
+            n--;
+            if (rowStart < m) {
+                for (i = n - 1; i >= colStart; --i) {
+                    output.push((arr[m - 1][i]));
+                }
+                m--;
+            }
+            if (colStart < n) {
+                for (i = m - 1; i >= rowStart; --i) {
+                    output.push((arr[i][colStart]));
+                }
+                colStart++;
+            }
+        }
+        return output.toString();
     }
-
-
 
 }
 
-module.exports = Exercise_6_1
+module.exports = Exercise_6
