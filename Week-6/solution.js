@@ -74,6 +74,28 @@ const Exercise_6 = {
             }
         }
         return arr.toString();
+    },
+
+    calculateProfit:(prices)=>{
+        const min = Math.min(...prices)
+        const sub = prices.slice(prices.indexOf(min), prices.length);
+        if (sub.length>0)
+        {
+            const max = Math.max(...sub)
+            if (max<=min)
+            {
+                return 0
+            }
+            else
+            {
+                return max-min
+            }
+        }
+        else
+        {
+            return 0
+        }
+
     }
 
 }

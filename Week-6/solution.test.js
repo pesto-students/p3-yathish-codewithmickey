@@ -19,4 +19,10 @@ describe("Exercise for week 6 BDD", () => {
   test("Exercise 6.3 test 1", () => {
     expect(Exercise_6.arrange([0, 2, 1, 2, 0])).toBe([0, 0, 1, 2, 2].toString());
   });
+  test("Exercise 6.4 test 1", () => {
+    expect(Exercise_6.calculateProfit([7,1,5,3,6,4])).toBe(5);
+  });
+  test("Exercise 6.4 test 2", () => {
+    expect(Exercise_6.calculateProfit([7,6,4,3,1])).toBe(0);
+  });
 });
