@@ -16,4 +16,7 @@ describe("Exercise for week 6 BDD", () => {
         [ 9, 10, 11, 12 ],
         [ 13, 14, 15, 16 ]])).toBe([1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10].toString());
   });
+  test("Exercise 6.3 test 1", () => {
+    expect(Exercise_6.arrange([0, 2, 1, 2, 0])).toBe([0, 0, 1, 2, 2].toString());
+  });
 });

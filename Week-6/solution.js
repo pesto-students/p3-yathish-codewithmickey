@@ -43,6 +43,37 @@ const Exercise_6 = {
             }
         }
         return output.toString();
+    },
+
+    // Exercise 6.3
+    arrange: (arr) =>{
+        
+        let maxlength = arr.length - 1; 
+        let current = 0;
+        let follow = 0;
+        let temp;
+        while(current<=maxlength)    {
+            if(arr[current] == 0)
+            {
+                temp = arr[follow]
+                arr[follow] = arr[current]
+                arr[current] = temp
+                follow++;
+                current++;
+            }
+            else if(arr[current] == 1)
+            {
+                current++
+            }
+            else
+            {
+                temp = arr[current]
+                arr[current] = arr[maxlength]
+                arr[maxlength] = temp
+                maxlength--;
+            }
+        }
+        return arr.toString();
     }
 
 }
