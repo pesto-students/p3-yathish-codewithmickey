@@ -96,6 +96,22 @@ const Exercise_6 = {
             return 0
         }
 
+    },
+
+    findPair:(arr, answer)=>{
+        for(el of arr)
+        {
+            for(el1 of arr)
+            {
+                console.log(el,el1,el-el1,answer)
+                const computed = el-el1
+                if(computed === answer)
+                {
+                    return 1
+                }
+            }
+        }
+        return 0
     }
 
 }
