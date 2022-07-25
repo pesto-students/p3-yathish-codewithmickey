@@ -33,4 +33,8 @@ describe("Exercise for week 6 BDD", () => {
   test("Exercise 6.5 test 2", () => {
     expect(Exercise_6.findPair([-10, 20] ,30)).toBe(1);
   });
+
+  test("Exercise 6.6 test 1", () => {
+    expect(Exercise_6.closestSum([-1,2,1,-4], 1)).toBe(2);
+  });
 });

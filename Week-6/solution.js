@@ -112,6 +112,39 @@ const Exercise_6 = {
             }
         }
         return 0
+    },
+
+    /*
+
+    closestSum
+
+    Time complexity: O(N2). 
+    Space Complexity: O(1). 
+
+    */
+    closestSum: (arr, tomatch) =>
+    {
+        arr.sort((a, b) => a - b);
+        let closestSum = 1000; // Max Overflow
+        for (let i = 0; i < arr.length - 2; i++)
+        {
+            let secondnum = i + 1
+            let thirdnum = arr.length - 1;
+            while (secondnum < thirdnum) {
+                let currenttotal = arr[i] + arr[secondnum] + arr[thirdnum];
+                if (Math.abs(tomatch - currenttotal) < Math.abs(tomatch - closestSum))
+                {
+                    closestSum = currenttotal;
+                }
+                if (currenttotal > tomatch) {
+                thirdnum--;
+                }
+            else {
+                    secondnum++;
+                }
+            }
+        }
+        return closestSum;
     }
 
 }
